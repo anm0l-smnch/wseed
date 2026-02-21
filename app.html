@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App — wseed.world</title>
+  <meta name="description" content="Interactive welfare evaluation tool for comparing climate-work scenarios." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">wseed.world</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="app.html">App</a></li>
+      <li><a href="people.html">People</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1 style="font-family:var(--font-serif); font-weight:normal; font-size:1.9rem; margin-bottom:12px;">
+    Welfare Evaluation App
+  </h1>
+  <p>
+    The interactive app allows you to compute welfare comparisons between the Sustainable Convergence and
+    Productivist Convergence scenarios under your own parameter assumptions. Adjust the social discount rate,
+    utility specification, climate damage parameters, and leisure curvature to explore how the results change.
+  </p>
+
+  <div class="downloads" style="margin: 20px 0;">
+    <a class="btn btn-primary" href="https://gjp-welfare.streamlit.app" target="_blank" rel="noopener">
+      &#8599; Open App in Full Screen
+    </a>
+  </div>
+
+  <div class="app-frame-wrapper">
+    <iframe
+      src="https://gjp-welfare.streamlit.app/?embedded=true"
+      title="GJP Welfare Evaluation App"
+      allow="fullscreen"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <p class="app-note">
+    App hosted on <a href="https://streamlit.io/cloud" target="_blank" rel="noopener">Streamlit Community Cloud</a>.
+    If the embedded view is slow to load, use the full-screen link above.
+    Data files can be downloaded from the <a href="data.html">Data</a> page.
+  </p>
+
+  <hr />
+
+  <h2>What the App Computes</h2>
+
+  <h3>Utility Specifications</h3>
+  <p>
+    <strong>Additive (baseline):</strong> Separable log consumption plus CRRA leisure. The leisure weight
+    &chi; is calibrated from the 2025 baseline work&ndash;leisure split, independently of consumption levels.
+  </p>
+  <p>
+    <strong>CES:</strong> Consumption and leisure enter a constant elasticity of substitution composite.
+    The elasticity parameter &epsilon; controls the degree of complementarity or substitutability.
+  </p>
+  <p>
+    <strong>Ecological:</strong> A CES composite of damage-adjusted consumption and environmental quality,
+    combined with a leisure term. This specification gives direct utility weight to the environment.
+  </p>
+
+  <h3>Key Parameters</h3>
+  <ul style="padding-left:20px; font-size:0.95rem; line-height:2.1;">
+    <li><strong>Social discount rate (r)</strong> &mdash; default 2%; range 0.5%&ndash;5%</li>
+    <li><strong>Output damage (&phi;)</strong> &mdash; default 12% per &deg;C</li>
+    <li><strong>Amenity damage (&gamma;)</strong> &mdash; default 13.33% per &deg;C</li>
+    <li><strong>Leisure curvature (&sigma;)</strong> &mdash; default 1 (log leisure); range 0&ndash;3</li>
+    <li><strong>CES elasticity (&epsilon;)</strong> &mdash; default 0.8 (mild complements)</li>
+  </ul>
+</main>
+
+<footer>
+  <p>&copy; 2026 wseed.world</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

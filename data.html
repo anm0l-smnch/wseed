@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data — wseed.world</title>
+  <meta name="description" content="Data and replication materials for the WSEED project." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">wseed.world</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="app.html">App</a></li>
+      <li><a href="people.html">People</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1 style="font-family:var(--font-serif); font-weight:normal; font-size:1.9rem; margin-bottom:12px;">Data</h1>
+  <p>
+    All datasets, figures, and replication materials are freely available for download.
+    The welfare evaluation app uses the same underlying data and can be accessed on the <a href="app.html">App</a> page.
+  </p>
+
+  <hr />
+
+  <div class="data-section">
+    <h3>Scenario Data</h3>
+    <p>
+      Annual region-level projections (2025&ndash;2100) of per-capita consumption, per-capita labour hours,
+      and cumulative temperature change for eight world regions under two scenarios: Sustainable Convergence (SC)
+      and Productivist Convergence (PC).
+    </p>
+    <div class="downloads">
+      <!-- Update href when file is hosted -->
+      <a class="btn btn-primary" href="#">&#8595; DataInput_Welfare.xlsx</a>
+      <a class="btn" href="#">&#8595; Scenarios_WelfareInput.xlsx</a>
+    </div>
+  </div>
+
+  <div class="data-section">
+    <h3>Main Figures and Tables</h3>
+    <p>
+      All figures and tables from the main paper, together with the underlying numerical results.
+    </p>
+    <div class="downloads">
+      <a class="btn" href="#">&#8595; Figures &amp; Tables (PDF)</a>
+      <a class="btn" href="#">&#8595; Figures &amp; Tables (Excel)</a>
+    </div>
+  </div>
+
+  <div class="data-section">
+    <h3>Appendix Materials</h3>
+    <p>
+      Full set of appendix figures, robustness checks, and sensitivity analyses.
+    </p>
+    <div class="downloads">
+      <a class="btn" href="#">&#8595; Appendix Figures (PDF)</a>
+      <a class="btn" href="#">&#8595; Appendix Figures (Excel)</a>
+    </div>
+  </div>
+
+  <div class="data-section">
+    <h3>Replication Package</h3>
+    <p>
+      Complete replication package including data, code, and instructions to reproduce all results in the paper.
+      The interactive welfare evaluation app is hosted separately at <a href="app.html">wseed.world/app</a>.
+    </p>
+    <div class="downloads">
+      <a class="btn" href="#">&#8595; Replication Package</a>
+      <a class="btn" href="https://github.com" target="_blank" rel="noopener">&#8599; GitHub Repository</a>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2>Citation</h2>
+  <div class="citation-box">
+    Chancel, L., Mohren, C., Odersky, M., Piketty, T., &amp; Somanchi, A. (2026).
+    Planetary Habitability, Global Convergence and Structural Transformation, 2026&ndash;2100.
+    <em>Working Paper.</em>
+  </div>
+
+  <hr />
+
+  <h2>Data Structure</h2>
+  <p>
+    The scenario Excel files contain two sheets: <strong>SC</strong> (Sustainable Convergence) and
+    <strong>PC</strong> (Productivist Convergence). Each sheet covers 76 annual time steps (2025&ndash;2100)
+    across eight regions, with the following variables:
+  </p>
+  <ul style="padding-left:20px; font-size:0.95rem; line-height:2;">
+    <li><strong>c</strong> &mdash; per-capita consumption (USD, 2020 PPP)</li>
+    <li><strong>h</strong> &mdash; per-capita annual labour hours (hrs/yr)</li>
+    <li><strong>&Delta;T<sup>inc</sup></strong> &mdash; year-on-year temperature increment (&deg;C)</li>
+  </ul>
+  <p style="margin-top:12px; font-size:0.9rem; color:var(--muted);">
+    Eight regions: Europe (EURO), North America &amp; Oceania (NAOC), Latin America (LATAM),
+    MENA, Sub-Saharan Africa (SSAF), Russia &amp; Central Asia (RUCA),
+    East Asia (EASA), South &amp; South-East Asia (SSEA).
+  </p>
+</main>
+
+<footer>
+  <p>&copy; 2026 wseed.world</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

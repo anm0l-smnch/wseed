@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — wseed.world</title>
+  <meta name="description" content="Working paper: Planetary Habitability, Global Convergence and Structural Transformation, 2026–2100." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">wseed.world</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="app.html">App</a></li>
+      <li><a href="people.html">People</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1 class="paper-title">
+    Planetary Habitability, Global Convergence and Structural Transformation, 2026–2100
+  </h1>
+
+  <p class="paper-meta">
+    Lucas Chancel, Cornelia Mohren, Moritz Odersky, Thomas Piketty, Anmol Somanchi &mdash; 2026
+  </p>
+
+  <!-- Replace src with an actual figure from the paper when available -->
+  <img
+    class="paper-img"
+    src="img/figure_main.png"
+    alt="Main results figure"
+    onerror="this.style.display='none'"
+  />
+
+  <div class="abstract">
+    <p>
+      We develop a welfare-theoretic framework to evaluate two long-run global development pathways over 2025&ndash;2100.
+      The <em>Sustainable Convergence</em> scenario achieves broad-based convergence to high living standards through
+      structural transformation, shorter working hours, and rapid decarbonisation, reaching approximately 0.4&deg;C of
+      cumulative warming by 2100. The <em>Productivist Convergence</em> scenario achieves higher raw output growth but
+      with longer working hours and 2.8&deg;C of cumulative warming.
+    </p>
+    <p>
+      Going beyond GDP, we value both consumption and leisure, and apply an exponential climate damage wedge that
+      reduces effective consumption as temperatures rise. Welfare is compared using a <em>consumption equivalent</em>
+      metric across eight world regions. Sustainable Convergence is welfare-superior in every region. The global welfare
+      advantage is equivalent to an 8.4% permanent increase in consumption under baseline parameters, and is robust
+      across utility specifications, discount rates, and damage parameterisations.
+    </p>
+  </div>
+
+  <h2>Downloads</h2>
+
+  <div class="downloads">
+    <!-- Update hrefs to actual file paths / URLs when available -->
+    <a class="btn btn-primary" href="#" title="Working paper PDF (coming soon)">
+      &#8595; Working Paper
+    </a>
+    <a class="btn" href="#" title="Presentation slides PDF (coming soon)">
+      &#8595; Slides
+    </a>
+    <a class="btn" href="#" title="Published version (coming soon)">
+      &#8599; Published Version
+    </a>
+  </div>
+
+  <hr />
+
+  <h2>Framework</h2>
+
+  <h3>Scenarios and Data</h3>
+  <p>
+    Each scenario provides annual region-level projections (2025&ndash;2100) of per-capita consumption, per-capita labour
+    hours, and temperature increments for eight world regions: Europe, North America &amp; Oceania, Latin America,
+    MENA, Sub-Saharan Africa, Russia &amp; Central Asia, East Asia, and South &amp; South-East Asia.
+  </p>
+
+  <h3>Climate Damage Wedge</h3>
+  <p>
+    Effective consumption is defined as raw consumption multiplied by an exponential damage factor
+    exp[&minus;(&phi; + &gamma;)&Delta;T], where &phi; = 12% captures output damages and &gamma; = 13.33% captures
+    non-market amenity losses (health, ecosystems, infrastructure) per degree of warming. At 2.8&deg;C,
+    effective consumption is roughly halved relative to raw output.
+  </p>
+
+  <h3>Welfare Metric</h3>
+  <p>
+    Period utility values both damage-adjusted consumption and leisure (time endowment minus working hours).
+    Lifetime welfare is the discounted sum of period utilities. The consumption equivalent &lambda; is the permanent
+    percentage change in consumption that would make an individual under Productivist Convergence indifferent to
+    Sustainable Convergence.
+  </p>
+
+  <h2>Results Summary</h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:0.92rem; margin-top:8px;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--border);">
+        <th style="text-align:left; padding:8px 4px;">Region</th>
+        <th style="text-align:right; padding:8px 4px;">Consumption Equivalent (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;"><strong>World</strong></td>
+        <td style="text-align:right; padding:7px 4px;"><strong>+8.4</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">Europe</td>
+        <td style="text-align:right; padding:7px 4px;">+7.8</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">North America &amp; Oceania</td>
+        <td style="text-align:right; padding:7px 4px;">+8.4</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">Latin America</td>
+        <td style="text-align:right; padding:7px 4px;">+23.0</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">MENA</td>
+        <td style="text-align:right; padding:7px 4px;">+39.9</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">Sub-Saharan Africa</td>
+        <td style="text-align:right; padding:7px 4px;">+27.2</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">Russia &amp; Central Asia</td>
+        <td style="text-align:right; padding:7px 4px;">+32.4</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--border);">
+        <td style="padding:7px 4px;">East Asia</td>
+        <td style="text-align:right; padding:7px 4px;">+1.1</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 4px;">South &amp; South-East Asia</td>
+        <td style="text-align:right; padding:7px 4px;">+18.5</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem; color:var(--muted); margin-top:8px;">
+    Baseline: additive utility, &sigma; = 1, social discount rate r = 2%.
+    A positive value means Sustainable Convergence is welfare-superior.
+  </p>
+</main>
+
+<footer>
+  <p>&copy; 2026 wseed.world</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
