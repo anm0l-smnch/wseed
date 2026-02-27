@@ -61,6 +61,7 @@ website/
 - "Replication Package" section
 - Citation box with paper full title
 - **"Data Structure" section was deliberately deleted — do not re-add**
+- **"Replication Package" section was deliberately deleted — do not re-add**
 
 ### people.html (People)
 - `<main style="max-width: 900px;">` — intentionally wider than default 760px to fit Somanchi's long role text
@@ -103,16 +104,17 @@ Four self-contained IIFEs:
 ---
 
 ## Git & deployment
-- Repo: **new GitHub repo** (not yet created/pushed as of last session)
-- Custom domain: **wseed.world** — set via `CNAME` file (already in repo)
-- DNS: needs A records pointed to GitHub Pages IPs (or CNAME to `<username>.github.io`)
-- GitHub Pages: enable in repo Settings → Pages → deploy from `main` branch root
+- Repo: **https://github.com/anm0l-smnch/wseed** ✓ (created and pushed)
+- Custom domain: **wseed.world** — set via `CNAME` file + configured in GitHub Pages settings ✓
+- DNS: 4 A records (185.199.108.153 / .109 / .110 / .111) + CNAME `www` → `anm0l-smnch.github.io` — all set in GoDaddy ✓
+- GitHub Pages: enabled on `main` branch root, custom domain verified ✓
+- HTTPS: not yet enabled (SSL certificate still provisioning — check back in GitHub Pages settings and tick "Enforce HTTPS" once available)
+- **Workflow for future edits:** edit locally → commit in GitHub Desktop → Push origin → site redeploys in ~1–2 min
 
 ---
 
 ## Things still TODO
-- [ ] Push to GitHub and create the repo
-- [ ] Set up DNS for wseed.world
+- [ ] Enable "Enforce HTTPS" in GitHub Pages settings (once SSL certificate is provisioned)
 - [ ] Add real URLs to all download buttons (Working Paper, Slides, Full dataset, etc.)
 - [ ] Add download links for Main Figures, Appendix, Replication Package on data.html
 - [ ] Photos and bios are complete ✓

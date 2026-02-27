@@ -57,7 +57,7 @@
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
 
-  function startAuto() { timer = setInterval(next, 5000); }
+  function startAuto() { timer = setInterval(next, 10000); }
   function stopAuto()  { clearInterval(timer); }
 
   carousel.querySelector('.carousel-next').addEventListener('click', function () { stopAuto(); next(); startAuto(); });
