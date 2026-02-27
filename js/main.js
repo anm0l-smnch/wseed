@@ -33,6 +33,46 @@
   });
 })();
 
+// ── Carousel ─────────────────────────────────────────────────
+(function () {
+  var carousel = document.getElementById('figCarousel');
+  if (!carousel) return;
+
+  var slides  = carousel.querySelectorAll('.carousel-slide');
+  var dots    = carousel.querySelectorAll('.carousel-dot');
+  var counter = document.getElementById('carouselCurrent');
+  var total   = slides.length;
+  var current = 0;
+  var timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    if (counter) counter.textContent = current + 1;
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 5000); }
+  function stopAuto()  { clearInterval(timer); }
+
+  carousel.querySelector('.carousel-next').addEventListener('click', function () { stopAuto(); next(); startAuto(); });
+  carousel.querySelector('.carousel-prev').addEventListener('click', function () { stopAuto(); prev(); startAuto(); });
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { stopAuto(); goTo(i); startAuto(); });
+  });
+
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
+
 // ── Active nav link ──────────────────────────────────────────
 (function () {
   const page = location.pathname.split('/').pop() || 'index.html';
