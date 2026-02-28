@@ -145,7 +145,7 @@ main {
   color: var(--muted);
   margin-top: -28px;
   margin-bottom: 28px;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
 }
 
@@ -559,7 +559,8 @@ footer {
 
   .wseed-label { white-space: normal; font-size: 1.5rem; }
 
-  .person { flex-direction: column; gap: 16px; }
+.person { flex-direction: column; gap: 16px; align-items: center; }
+  .person-info { text-align: center; }
 
   .downloads { flex-direction: column; }
 
