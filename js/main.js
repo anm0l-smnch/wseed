@@ -70,6 +70,52 @@
   carousel.addEventListener('mouseenter', stopAuto);
   carousel.addEventListener('mouseleave', startAuto);
 
+  // Lightbox
+  var lb       = document.getElementById('lightbox');
+  var lbImg    = lb ? lb.querySelector('.lightbox-img') : null;
+  var lbClose  = lb ? lb.querySelector('.lightbox-close') : null;
+
+  var lbPrev = lb ? lb.querySelector('.lightbox-prev') : null;
+  var lbNext = lb ? lb.querySelector('.lightbox-next') : null;
+
+  function lbGoTo(n) {
+    goTo(n);
+    var img = slides[current].querySelector('img');
+    if (img) { lbImg.src = img.src; lbImg.alt = img.alt; }
+  }
+
+  function onLbKey(e) {
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  lbGoTo(current - 1);
+    if (e.key === 'ArrowRight') lbGoTo(current + 1);
+  }
+
+  function openLightbox(src, alt) {
+    if (!lb) return;
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lb.classList.add('open');
+    stopAuto();
+    document.addEventListener('keydown', onLbKey);
+  }
+
+  function closeLightbox() {
+    if (!lb) return;
+    lb.classList.remove('open');
+    startAuto();
+    document.removeEventListener('keydown', onLbKey);
+  }
+
+  slides.forEach(function (slide) {
+    var img = slide.querySelector('img');
+    if (img) img.addEventListener('click', function () { openLightbox(img.src, img.alt); });
+  });
+
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  if (lbPrev)  lbPrev.addEventListener('click', function () { lbGoTo(current - 1); });
+  if (lbNext)  lbNext.addEventListener('click', function () { lbGoTo(current + 1); });
+  if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
+
   startAuto();
 })();
 

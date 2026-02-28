@@ -113,11 +113,17 @@ Four self-contained IIFEs:
 
 ---
 
+## Download files
+- `downloads/wseed-working-paper.pdf` → Research page "Working Paper" button
+- `downloads/wseed-slides.pdf` → Research page "Slides" button
+- `downloads/wseed-figures-tables.pdf` → Data page "Figures & Tables (PDF)" button
+- `downloads/wseed-figures-tables.xlsx` → Data page "Figures & Tables (Excel)" button
+- `downloads/wseed-appendix-figures-tables.pdf` → Data page "Appendix Figures & Tables (PDF)" button
+- Dropbox (dl=1): Full dataset (.zip) → `https://www.dropbox.com/scl/fi/8hmgpr0b2pud0dtnfu3ns/Chanceletal2026.zip?rlkey=ulevwc7lzj5nypfzyplifo9bz&dl=1`
+- Dropbox (dl=1): Appendix Files (.zip) → `https://www.dropbox.com/scl/fi/viza4c28wg8j4vneqowfr/Chanceletal2026DataAppendix.zip?rlkey=irulo0kofou3h0gm9naej07py&dl=1`
+
 ## Things still TODO
 - [ ] Enable "Enforce HTTPS" in GitHub Pages settings (once SSL certificate is provisioned)
-- [ ] Add real URLs to all download buttons (Working Paper, Slides, Full dataset, etc.)
-- [ ] Add download links for Main Figures, Appendix, Replication Package on data.html
-- [ ] Photos and bios are complete ✓
 
 ---
 
