@@ -108,7 +108,7 @@ Four self-contained IIFEs:
 - Custom domain: **wseed.world** — set via `CNAME` file + configured in GitHub Pages settings ✓
 - DNS: 4 A records (185.199.108.153 / .109 / .110 / .111) + CNAME `www` → `anm0l-smnch.github.io` — all set in GoDaddy ✓
 - GitHub Pages: enabled on `main` branch root, custom domain verified ✓
-- HTTPS: not yet enabled (SSL certificate still provisioning — check back in GitHub Pages settings and tick "Enforce HTTPS" once available)
+- HTTPS: ✓ enabled — "Enforce HTTPS" ticked in GitHub Pages settings
 - **Workflow for future edits:** edit locally → commit in GitHub Desktop → Push origin → site redeploys in ~1–2 min
 
 ---
@@ -123,7 +123,7 @@ Four self-contained IIFEs:
 - Dropbox (dl=1): Appendix Files (.zip) → `https://www.dropbox.com/scl/fi/viza4c28wg8j4vneqowfr/Chanceletal2026DataAppendix.zip?rlkey=irulo0kofou3h0gm9naej07py&dl=1`
 
 ## Things still TODO
-- [ ] Enable "Enforce HTTPS" in GitHub Pages settings (once SSL certificate is provisioned)
+- Nothing pending at the moment ✓
 
 ---
 
